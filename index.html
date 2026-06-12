@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EVERYWHEN — Finance, terraformed</title>
+<meta name="description" content="A FinTech world you travel through. Grow, flow, guard and ascend — finance as a living landscape." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<script type="importmap">
+  { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+</script>
+</head>
+<body>
+
+<canvas id="scene"></canvas>
+<div class="vignette"></div>
+<div class="grain"></div>
+
+<nav>
+  <div class="logo">✦ EVERYWHEN</div>
+  <div class="nav-links">
+    <a href="#" data-goto="0.0">World</a>
+    <a href="#" data-goto="0.25">Yield</a>
+    <a href="#" data-goto="0.48">Payments</a>
+    <a href="#" data-goto="0.70">Safety</a>
+  </div>
+  <button class="btn" id="enter-app">Enter App</button>
+</nav>
+
+<main>
+  <!-- 00 · ARRIVAL -->
+  <section class="stage" data-side="center" data-start="-0.06" data-end="0.13">
+    <div class="panel">
+      <p class="kicker">Everywhen · a living economy</p>
+      <h1>Finance is not a dashboard.<br /><span class="grad">It's a world.</span></h1>
+      <p class="sub">Your money lives somewhere. We built the landscape — valleys of yield, rivers of payment, mountains that keep watch. Scroll to descend.</p>
+      <div class="cta-row">
+        <button class="btn solid" data-goto="0.25">Enter the world</button>
+        <button class="btn" id="auto-fly">Watch the flight</button>
+      </div>
+    </div>
+    <div class="hint"><span>Descend</span><i></i></div>
+  </section>
+
+  <!-- 01 · GROW -->
+  <section class="stage" data-side="left" data-start="0.16" data-end="0.36">
+    <div class="panel">
+      <span class="num">01</span>
+      <p class="kicker">The Crystal Terraces</p>
+      <h2>Plant your wealth.<br /><span class="grad">Watch it bloom.</span></h2>
+      <p class="sub">Savings here grow like crystal flora — compounding every sunrise, visible from orbit. No lockups, no pruning fees, no dead soil.</p>
+      <div class="chips">
+        <span class="chip"><b>4.2%</b> APY, auto-compounding</span>
+        <span class="chip"><b>$0</b> minimum to plant</span>
+        <span class="chip">Withdraw <b>anytime</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · FLOW -->
+  <section class="stage" data-side="right" data-start="0.39" data-end="0.58">
+    <div class="panel">
+      <span class="num">02</span>
+      <p class="kicker">The Luminous River</p>
+      <h2>Money that moves<br /><span class="grad">like weather.</span></h2>
+      <p class="sub">Send value across the valley in a heartbeat. Payments ride the river — instant, borderless, settled before the ripple fades.</p>
+      <div class="chips">
+        <span class="chip"><b>180+</b> countries</span>
+        <span class="chip"><b>$0</b> between Everywhen accounts</span>
+        <span class="chip">Settles in <b>&lt;1s</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · GUARD -->
+  <section class="stage" data-side="left" data-start="0.61" data-end="0.80">
+    <div class="panel">
+      <span class="num">03</span>
+      <p class="kicker">The Citadel</p>
+      <h2>A fortress dreams<br /><span class="grad">in the fog.</span></h2>
+      <p class="sub">Your assets sleep inside the mountain — hardware-isolated keys, biometric gates, watched by an aurora that never blinks. Nothing gets in. Nothing leaks out.</p>
+      <div class="chips">
+        <span class="chip"><b>$250k</b> insured</span>
+        <span class="chip"><b>Biometric</b> gates</span>
+        <span class="chip">Keys held <b>offline</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · ASCEND -->
+  <section class="stage on-light" data-side="center" data-start="0.84" data-end="1.05">
+    <div class="panel">
+      <p class="kicker">Above the clouds</p>
+      <h1>The horizon<br /><span class="grad">is yours.</span></h1>
+      <p class="sub">Two million explorers already live here. The sun is up, the air is thin, and your money is finally going somewhere.</p>
+      <div class="cta-row">
+        <button class="btn solid big" id="begin-ascent">Begin the ascent</button>
+      </div>
+      <p class="fine">Everywhen is a demo world. No dashboards were harmed in its making.</p>
+    </div>
+  </section>
+</main>
+
+<aside class="rail" aria-label="Journey progress">
+  <button data-goto="0.0"><span>Arrival</span></button>
+  <button data-goto="0.25"><span>Grow</span></button>
+  <button data-goto="0.48"><span>Flow</span></button>
+  <button data-goto="0.70"><span>Guard</span></button>
+  <button data-goto="0.96"><span>Ascend</span></button>
+</aside>
+
+<div class="scroll-space"></div>
+
+<div id="toast"></div>
+
+<div id="loader">
+  <div>
+    <div class="word">✦ EVERYWHEN</div>
+    <div class="lsub">shaping the landscape…</div>
+  </div>
+</div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
